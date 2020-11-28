@@ -1,0 +1,60 @@
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 10px;
+  width: 300px;
+  margin-bottom: 5px;
+  background-color: #ffffff;
+  box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    0px 1px 1px rgba(0, 0, 0, 0.12);
+  border-radius: 5px;
+  overflow: hidden;
+  transform: scale(1);
+  transition: transform 200ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 200ms cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+}
+
+.status {
+  width: 15px;
+  height: 15px;
+  margin-right: 20px;
+  border-radius: 50%;
+}
+
+.online {
+  composes: status;
+  background-color: green;
+}
+.offline {
+  composes: status;
+  background-color: red;
+}
+
+.avatar {
+  width: 60px;
+  height: 60px;
+  margin-right: 60px;
+  border-radius: 5px;
+  background-color: rgb(252, 255, 87);
+  transition: background-color 200ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.name {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.item:hover,
+.item:focus {
+  transform: scale(1.05);
+}
+
+.item:hover .avatar,
+.item:focus .avatar {
+  background-color: rgb(27, 245, 245);
+}

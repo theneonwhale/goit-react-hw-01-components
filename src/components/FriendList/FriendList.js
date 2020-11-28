@@ -4,21 +4,14 @@ import s from './FriendList.module.css';
 
 function FriendList({ friends }) {
   return (
-    <ul class="friend-list">
+    <ul className={s.friendList}>
       <FriendListItem friends={friends} />
     </ul>
   );
 }
 
-// Statictics.propTypes = {
-//   title: PropTypes.string.isRequired,
-//   stats: PropTypes.arrayOf(
-//     PropTypes.shape({
-//       id: PropTypes.string.isRequired,
-//       label: PropTypes.string.isRequired,
-//       percentage: PropTypes.number.isRequired,
-//     }),
-//   ),
-// };
+FriendList.propTypes = {
+  friends: PropTypes.array.isRequired,
+};
 
 export default FriendList;

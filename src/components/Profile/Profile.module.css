@@ -1,0 +1,105 @@
+.profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 20px;
+  margin-bottom: 20px;
+  width: 300px;
+  border-radius: 5px;
+  box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    0px 1px 1px rgba(0, 0, 0, 0.12);
+  background-color: rgb(255, 255, 255);
+  font-family: 'Mukta', sans-serif;
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.avatar {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border-radius: 50%;
+  background-color: rgb(252, 255, 87);
+  box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    0px 1px 1px rgba(0, 0, 0, 0.12);
+}
+
+.avatar:hover {
+  background-color: rgb(255, 87, 191);
+  box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 1px 3px rgba(0, 0, 0, 0.12), 0px 0px 25px rgba(255, 87, 191, 0.6);
+}
+
+.name {
+  margin-top: 20px;
+  margin-bottom: 0;
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.tag {
+  margin-top: 10px;
+  margin-bottom: 0;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.location {
+  margin-top: 10px;
+  margin-bottom: 0;
+  font-size: 12px;
+}
+
+.stats {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 0;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  overflow: hidden;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: calc(100% / 3);
+  height: 80px;
+  box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 1px 3px rgba(0, 0, 0, 0.12);
+  background-color: rgb(60, 203, 228);
+  cursor: pointer;
+}
+
+.label {
+  color: #082a99;
+  font-weight: 700;
+}
+
+.quantity {
+  margin-top: 5px;
+  color: rgb(252, 255, 87);
+  font-weight: 700;
+}
+
+.item:hover,
+.item:focus {
+  background-color: rgb(252, 255, 87);
+}
+
+.item:hover .label,
+.item:hover .quantity,
+.item:focus .label,
+.item:focus .quantity {
+  color: rgb(255, 87, 191);
+  text-shadow: 0px 0px 15px rgba(255, 87, 191, 0.5);
+}

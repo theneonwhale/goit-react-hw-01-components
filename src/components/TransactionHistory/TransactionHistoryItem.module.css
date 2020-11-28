@@ -1,0 +1,28 @@
+.tableRow {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  color: #000;
+}
+
+.tableRow:nth-child(2n) {
+  background-color: rgb(236, 157, 236);
+}
+
+.tableData {
+  width: 100px;
+  padding: 5px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.tableData:nth-child(2) {
+  border-left: 1px solid rgb(143, 143, 143);
+  border-right: 1px solid rgb(143, 143, 143);
+}
+
+.tableData:hover,
+.tableData:focus {
+  background-color: rgb(255, 0, 255);
+  color: #ffffff;
+}

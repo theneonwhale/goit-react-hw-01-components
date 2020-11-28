@@ -4,31 +4,24 @@ import s from './TransactionHistory.module.css';
 
 function TransactionHistory({ transactions }) {
   return (
-    <table class="transaction-history">
+    <table className={s.transactionHistory}>
       <thead>
-        <tr>
-          <th>Type</th>
-          <th>Amount</th>
-          <th>Currency</th>
+        <tr className={s.tableRow}>
+          <th className={s.tableHeading}>Type</th>
+          <th className={s.tableHeading}>Amount</th>
+          <th className={s.tableHeading}>Currency</th>
         </tr>
       </thead>
 
-      <tbody>
+      <tbody className={s.tableBody}>
         <TransactionHistoryItem transactions={transactions} />
       </tbody>
     </table>
   );
 }
 
-// Statictics.propTypes = {
-//   title: PropTypes.string.isRequired,
-//   stats: PropTypes.arrayOf(
-//     PropTypes.shape({
-//       id: PropTypes.string.isRequired,
-//       label: PropTypes.string.isRequired,
-//       percentage: PropTypes.number.isRequired,
-//     }),
-//   ),
-// };
+TransactionHistory.propTypes = {
+  transactions: PropTypes.array.isRequired,
+};
 
 export default TransactionHistory;
