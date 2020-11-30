@@ -14,14 +14,27 @@ function TransactionHistory({ transactions }) {
       </thead>
 
       <tbody className={s.tableBody}>
-        <TransactionHistoryItem transactions={transactions} />
+        {transactions.map(({ id, type, amount, currency }) => {
+          return (
+            <TransactionHistoryItem
+              key={id}
+              type={type}
+              amount={amount}
+              currency={currency}
+            />
+          );
+        })}
       </tbody>
     </table>
   );
 }
 
 TransactionHistory.propTypes = {
-  transactions: PropTypes.array.isRequired,
+  transactions: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+    }),
+  ),
 };
 
 export default TransactionHistory;
